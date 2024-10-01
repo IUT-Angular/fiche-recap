@@ -26,7 +26,9 @@
 ### Routing
 
 1. https://angular.dev/guide/routing/common-router-tasks
-2. Gestion des paramètres via `:param` et que l'on récupère dans le composant via `this.activatedRoute.snapshot.params['param']`
+2. Les routes sont déclarées au sein du fichier `app.routes.ts`
+3. Gestion des paramètres via `:param` et que l'on récupère dans le composant via `this.activatedRoute.snapshot.params['param']`
+4. Prévoir une page `NotFound`
 
 ### Modèle
 
