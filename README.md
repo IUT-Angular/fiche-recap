@@ -36,6 +36,40 @@
 2. Pour déclarer un propriété : `title: string`
 3. Pour déclarer un propriété acceptant la valeur null : `description: string | null`
 
+### Injecter une donnée dans un composant enfant
+
+1. Lien sur la doc : https://angular.dev/guide/components/inputs
+2. Dans un composant <enfant> , si on souhaite injecter depuis le composant appelant/parent des données, la propriétés devra être déclarée avec le décorateur `@input`
+```
+public class enfant {
+    @Input() name: string;
+}
+```
+
+```
+<enfant [name]="toto">
+```
+
+### Déclencher un événement depuis un composant enfant
+
+1. Lien sur la doc : https://angular.dev/guide/components/output-fn
+2. Dans un composant <enfant> , nous allons déclarer une propriété de type `output<T>` (ici T correspond au type de données qui sera transmis via l'événement)
+```
+public class enfant {
+    eventName = output<string>()    // Ancienne méthode @Output() eventName;
+
+    launchEvent(value: string) {
+        this.eventName.emit(value);
+    }
+}
+```
+
+```
+<enfant (eventName)="callback($event)">
+```
+
+La méthode `callback` est présente dans le composant parent.
+
 ## Tutoriel
 
 Un des tutoriels les mieux aboutis est le tutoriel officiel (longtemps batisé Tour of Heroes). Il vous permettra de réaliser une application Angular pas à pas directement dans le navigateur.
