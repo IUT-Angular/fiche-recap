@@ -74,10 +74,18 @@ La méthode `callback` est présente dans le composant parent.
 
 1. Afin de faire des requêtes HTTP, il est nécessaire d'injecter un client HTTP, de tpye `HttpClient` dans le composant/service où l'on souhaite l'utiliser
 2. Pour interroger une API, nous allons utiliser les méthodes suivantes : 
- - HttpClient.get<T>(url) => permet de récupérer des éléments de type T
+ - HttpClient.get<T[]>(url) => permet de récupérer des éléments de type T
+ - HttpClient.get<T>(url) => permet de récupérer un élément de type T
  - HttpClient.post<T>(url, element) => permet d'ajouter un élément de type T
  - HttpClient.put<T>(url, element) => permet de modifier un élément de type T
  - HttpClient.delete<T>(url) => permet de supprimmer un élément de type T
+3. Les méthodes permettant d'interroger une API sont asynchrones. Il faut donc souscrire à leur résolution : 
+
+```
+this.http.get<T[]>(this.apiUrl).subscribe(response => {
+    //traitement
+});
+```
 
 ## Tutoriel
 
