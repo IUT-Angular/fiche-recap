@@ -9,8 +9,8 @@
 ### Composants
 
 1. Création d'un composant en ligne de commande : `ng generate component --skip-tests=true --inline-style <component-name>`
-2. Affichage conditionnel ngIf / @if
-3. Affichage itératif ngFor / @for
+2. Affichage conditionnel @if
+3. Affichage itératif @for
 4. Mise en forme via des pipe. Exemple : `{{ property | date:'EEEE dd MMMM yyyy' }}`
 
 ### Form
@@ -100,3 +100,13 @@ Lien : https://angular.dev/tutorials/learn-angular
 3. Favoriser les interfaces pour les modèles/dto
 4. Respecter l'arborescence de fichiers
 5. Ne jamais commit ou distribuer le dossier `node_modules`, il faut l'ignorer via le `.gitignore`
+
+## Annexes des TPs
+
+1. forms : https://angular.dev/guide/forms
+2. input : https://material.angular.io/components/input/overview
+3. button : https://material.angular.io/components/button/overview
+4. menu : https://material.angular.io/components/menu/overview
+5. router : https://angular.dev/guide/routing/common-router-tasks
+6. http : https://angular.dev/guide/http
+7. material angular : https://material.angular.io/components/paginator/overview
